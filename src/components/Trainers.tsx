@@ -5,37 +5,37 @@ export default function Trainers() {
   const trainerList = [
     {
       name: "Marcus Vance",
-      role: "Head Coach & Founder",
-      specialty: "Bodybuilding & Powerlifting",
+      role: "Head Coach & Fondateur",
+      specialty: "Musculation & Force Athlétique",
       certs: ["CSCS", "NASM-PES", "CPR/AED"],
-      bio: "Over 12 years of coaching elite athletes and helping members build structural strength.",
+      bio: "Plus de 12 ans d'expérience à coacher des athlètes d'élite et à développer la force structurelle de nos membres.",
       initials: "MV",
       gradient: "linear-gradient(135deg, #1f2028 0%, #ccff00 100%)"
     },
     {
       name: "Sarah Jenkins",
-      role: "Mobility & Yoga Director",
-      specialty: "Vinyasa Flow & Functional Range",
+      role: "Directrice Mobilité & Yoga",
+      specialty: "Yoga Vinyasa & Mobilité Articulaire",
       certs: ["RYT-500", "FRCms Mobility Specialist"],
-      bio: "Dedicated to improving athletic flexibility, joint stability, and mental mindfulness.",
+      bio: "Dédiée à l'amélioration de la souplesse athlétique, de la stabilité des articulations et du bien-être mental.",
       initials: "SJ",
       gradient: "linear-gradient(135deg, #1f2028 0%, #00f0ff 100%)"
     },
     {
       name: "David Miller",
-      role: "Functional Training Coach",
-      specialty: "Metabolic HIIT & Kettlebells",
+      role: "Coach Entraînement Fonctionnel",
+      specialty: "HIIT Métabolique & Kettlebells",
       certs: ["CrossFit Level 2", "ISSA-CPT"],
-      bio: "Focuses on explosive speed, endurance conditioning, and dynamic functional movement.",
+      bio: "Spécialisé dans la vitesse explosive, le conditionnement physique et le mouvement fonctionnel dynamique.",
       initials: "DM",
       gradient: "linear-gradient(135deg, #1f2028 0%, #ff0055 100%)"
     },
     {
       name: "Emma Stone",
-      role: "Cardio & Spinning Lead",
-      specialty: "Fat Loss & Aerobic Stamina",
+      role: "Responsable Cardio & Spinning",
+      specialty: "Perte de Poids & Endurance Aérobie",
       certs: ["NASM-CPT", "Schwinn Cycling Certified"],
-      bio: "Passion-driven coach designed to maximize cardio endurance and maintain high workout motivation.",
+      bio: "Coache passionnée visant à maximiser l'endurance cardiovasculaire et maintenir une motivation extrême.",
       initials: "ES",
       gradient: "linear-gradient(135deg, #1f2028 0%, #ffa500 100%)"
     }
@@ -43,8 +43,8 @@ export default function Trainers() {
 
   return (
     <section id="trainers" className="trainers-section">
-      <span className="section-subtitle">ELITE COACHES</span>
-      <h2>MEET OUR EXPERT TRAINERS</h2>
+      <span className="section-subtitle">COACHS D'ÉLITE</span>
+      <h2>RENCONTREZ NOS ENTRAÎNEURS EXPERTS</h2>
 
       <div className="grid-4 trainers-grid">
         {trainerList.map((trainer, index) => (
@@ -60,7 +60,7 @@ export default function Trainers() {
                   
                   <div className="trainer-certs-box">
                     <span className="certs-label">
-                      <Award size={14} style={{ marginRight: '4px' }} /> Certifications:
+                      <Award size={14} style={{ marginRight: '4px' }} /> Certifications :
                     </span>
                     <ul className="trainer-certs-list">
                       {trainer.certs.map((c, cIdx) => (

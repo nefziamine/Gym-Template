@@ -5,35 +5,35 @@ export default function About() {
   const points = [
     {
       icon: <Shield size={24} />,
-      title: "Our Mission",
-      description: "Cultivate a community of strength, high performance, and relentless self-improvement.",
+      title: "Notre Mission",
+      description: "Cultiver une communauté de force, de haute performance et de dépassement de soi continu.",
       accent: "#ccff00"
     },
     {
       icon: <Award size={24} />,
-      title: "10+ Years",
-      description: "A decade of transforming lives, building elite physiques and improving athletic endurance.",
+      title: "Plus de 10 Ans",
+      description: "Une décennie à transformer des vies, sculpter des physiques d'élite et booster l'endurance athlétique.",
       accent: "#00f0ff"
     },
     {
       icon: <Users size={24} />,
-      title: "The Community",
-      description: "A tight-knit network of athletes, trainers, and enthusiasts pushing each other every day.",
+      title: "La Communauté",
+      description: "Un réseau soudé d'athlètes, de coachs et de passionnés qui s'encouragent chaque jour.",
       accent: "#ff0055"
     },
     {
       icon: <Heart size={24} />,
-      title: "Healthy Lifestyle",
-      description: "Physical wellness, optimal recovery, and sustainable nutritional habits for life.",
+      title: "Mode de Vie Sain",
+      description: "Bien-être physique, récupération optimale et habitudes nutritionnelles durables pour la vie.",
       accent: "#ffa500"
     }
   ]
 
   const stats = [
-    { value: "15K+", label: "Active Members" },
-    { value: "50+", label: "Expert Coaches" },
-    { value: "24/7", label: "Gym Access" },
-    { value: "10+", label: "Years Strong" }
+    { value: "15K+", label: "Membres Actifs" },
+    { value: "50+", label: "Coachs Experts" },
+    { value: "24/7", label: "Accès au Club" },
+    { value: "10+", label: "Années d'Expérience" }
   ]
 
   return (
@@ -41,14 +41,14 @@ export default function About() {
       <div className="about-inner">
         {/* Left: Narrative */}
         <div className="about-narrative">
-          <span className="section-subtitle">WHO WE ARE</span>
-          <h2 className="about-heading">ABOUT REVENGE GYM</h2>
+          <span className="section-subtitle">QUI SOMMES-NOUS</span>
+          <h2 className="about-heading">À PROPOS DE REVENGE GYM</h2>
           <h3 className="about-highlight">
-            NOT JUST A GYM —<br />
-            <span>A BREEDING GROUND FOR GREATNESS.</span>
+            NOUS TRANSFORMONS<br />
+            <span>LA COLÈRE EN PERFORMANCE. 🔥</span>
           </h3>
           <p className="about-text">
-            REVENGE GYM is built for those who seek to optimize their physical potential and mental strength. Whether you're a seasoned competitor or just starting out, we provide the environment, gear, and expertise to help you succeed.
+            REVENGE GYM est conçu pour ceux qui cherchent à optimiser leur potentiel physique et leur force mentale. Notre philosophie est claire : <strong>Train hard, rise harder</strong> (Entraînez-vous dur, élevez-vous encore plus haut). Trouvez votre paix, libérez votre force et dépassez-vous au quotidien.
           </p>
 
           {/* Stats Row */}

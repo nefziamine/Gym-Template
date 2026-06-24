@@ -8,99 +8,99 @@ export default function Membership() {
   const plans = [
     {
       name: "Basic",
-      monthlyPrice: 29,
-      yearlyPrice: 23,
-      description: "Ideal for self-guided training",
+      monthlyPrice: 50,
+      yearlyPrice: 40,
+      description: "Idéal pour l'entraînement en autonomie",
       features: [
-        "Gym floor access",
-        "Standard locker room access",
-        "Free on-site parking",
-        "RevengeGym mobile app access"
+        "Accès libre au plateau musculation",
+        "Accès aux vestiaires standards",
+        "Parking gratuit surveillé",
+        "Accès à l'application mobile RevengeGym"
       ],
-      cta: "Get Basic",
+      cta: "Choisir Basic",
       popular: false
     },
     {
       name: "Standard",
-      monthlyPrice: 49,
-      yearlyPrice: 39,
-      description: "Great for class enthusiasts",
+      monthlyPrice: 80,
+      yearlyPrice: 64,
+      description: "Parfait pour les adeptes des cours collectifs",
       features: [
-        "All Basic features",
-        "Unlimited group classes",
-        "1 Guest pass per month",
-        "1 Fitness assessment per month"
+        "Tous les avantages du pack Basic",
+        "Cours collectifs illimités",
+        "1 Pass invité par mois",
+        "1 Bilan de forme par mois"
       ],
-      cta: "Get Standard",
+      cta: "Choisir Standard",
       popular: false
     },
     {
       name: "Premium",
-      monthlyPrice: 79,
-      yearlyPrice: 63,
-      description: "For maximum performance goals",
+      monthlyPrice: 120,
+      yearlyPrice: 96,
+      description: "Pour des objectifs de performance maximaux",
       features: [
-        "All Standard features",
-        "1 Personal Trainer session/mo",
-        "Premium towel service",
-        "Sauna & recovery zone access"
+        "Tous les avantages du pack Standard",
+        "1 Séance de coaching privé / mois",
+        "Service de serviettes premium",
+        "Accès au sauna & zone de récupération"
       ],
-      cta: "Get Premium",
+      cta: "Choisir Premium",
       popular: true
     },
     {
       name: "VIP",
-      monthlyPrice: 149,
-      yearlyPrice: 119,
-      description: "The ultimate luxury fitness pass",
+      monthlyPrice: 250,
+      yearlyPrice: 200,
+      description: "Le pass fitness haut de gamme ultime",
       features: [
-        "All Premium features",
-        "Unlimited Personal Training",
-        "Customized nutrition plans",
-        "VIP lounge & private changing rooms"
+        "Tous les avantages du pack Premium",
+        "Coaching privé personnalisé illimité",
+        "Plans nutritionnels sur mesure",
+        "Accès au salon VIP & vestiaires privés"
       ],
-      cta: "Get VIP",
+      cta: "Choisir VIP",
       popular: false
     }
   ]
 
   return (
     <section id="membership" className="membership-section">
-      <span className="section-subtitle">MEMBERSHIP OPTIONS</span>
-      <h2>CHOOSE YOUR PLAN</h2>
+      <span className="section-subtitle">NOS FORMULES D'ABONNEMENT</span>
+      <h2>CHOISISSEZ VOTRE PACK</h2>
       
       {/* Billing Cycle Switch */}
       <div className="billing-toggle-container">
-        <span className={`billing-label ${!isYearly ? 'active' : ''}`}>Monthly</span>
+        <span className={`billing-label ${!isYearly ? 'active' : ''}`}>Mensuel</span>
         <button 
           className={`billing-switch ${isYearly ? 'yearly' : ''}`} 
           onClick={() => setIsYearly(!isYearly)}
-          aria-label="Toggle billing cycle"
+          aria-label="Changer le cycle de facturation"
         >
           <span className="billing-switch-handle"></span>
         </button>
         <span className={`billing-label ${isYearly ? 'active' : ''}`}>
-          Yearly <span className="discount-tag">Save 20%</span>
+          Annuel <span className="discount-tag">Économisez 20%</span>
         </span>
       </div>
 
       <div className="grid-4 pricing-grid">
         {plans.map((plan, index) => (
           <div key={index} className={`pricing-card card-glass ${plan.popular ? 'popular' : ''}`}>
-            {plan.popular && <span className="popular-badge">Most Popular</span>}
+            {plan.popular && <span className="popular-badge">Le Plus Populaire</span>}
             <div className="pricing-header">
               <h3 className="plan-name">{plan.name}</h3>
               <p className="plan-description">{plan.description}</p>
             </div>
             
             <div className="plan-price-box">
-              <span className="currency">$</span>
               <span className="price-amount">{isYearly ? plan.yearlyPrice : plan.monthlyPrice}</span>
-              <span className="price-period">/mo</span>
+              <span className="currency">DT</span>
+              <span className="price-period">/mois</span>
             </div>
 
             <div className="billing-type">
-              {isYearly ? "Billed annually" : "Billed monthly"}
+              {isYearly ? "Facturé annuellement" : "Facturé mensuellement"}
             </div>
 
             <ul className="plan-features">
@@ -121,7 +121,7 @@ export default function Membership() {
 
       <p className="pricing-disclaimer">
         <Info size={14} style={{ marginRight: '5px', verticalAlign: 'middle' }} />
-        All plans are subject to a one-time sign-up fee of $30. Membership terms and conditions apply.
+        Toutes les formules sont soumises à des frais d'inscription uniques de 30 DT. Les conditions générales d'adhésion s'appliquent.
       </p>
     </section>
   )

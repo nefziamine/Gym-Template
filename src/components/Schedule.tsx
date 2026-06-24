@@ -11,59 +11,68 @@ interface ClassEvent {
 }
 
 export default function Schedule() {
-  const [activeDay, setActiveDay] = useState('Monday')
+  const [activeDay, setActiveDay] = useState('Lundi')
 
-  const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+  const days = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche']
 
   const scheduleData: Record<string, ClassEvent[]> = {
-    Monday: [
-      { time: '07:00 AM - 08:00 AM', name: 'Strength Conditioning', trainer: 'Marcus Vance', room: 'Main Gym Floor', intensity: 'High' },
-      { time: '09:00 AM - 10:00 AM', name: 'Power Flow Yoga', trainer: 'Sarah Jenkins', room: 'Studio A', intensity: 'Low' },
-      { time: '12:00 PM - 01:00 PM', name: 'HIIT Core Burn', trainer: 'David Miller', room: 'Turf Area', intensity: 'High' },
-      { time: '05:30 PM - 06:30 PM', name: 'Zumba Dance', trainer: 'Emma Stone', room: 'Studio B', intensity: 'Medium' },
-      { time: '07:00 PM - 08:30 PM', name: 'Olympic Weightlifting', trainer: 'Marcus Vance', room: 'Lifting Platform', intensity: 'High' }
+    Lundi: [
+      { time: '07:00 - 08:00', name: 'Conditionnement & Force', trainer: 'Marcus Vance', room: 'Plateau Musculation', intensity: 'High' },
+      { time: '09:00 - 10:00', name: 'Yoga Power Flow', trainer: 'Sarah Jenkins', room: 'Studio A', intensity: 'Low' },
+      { time: '12:00 - 13:00', name: 'HIIT Brûle-Graisses', trainer: 'David Miller', room: 'Zone Synthétique (Turf)', intensity: 'High' },
+      { time: '17:30 - 18:30', name: 'Danse Zumba', trainer: 'Emma Stone', room: 'Studio B', intensity: 'Medium' },
+      { time: '19:00 - 20:30', name: 'Haltérophilie Olympique', trainer: 'Marcus Vance', room: 'Plateau Haltérophilie', intensity: 'High' }
     ],
-    Tuesday: [
-      { time: '08:00 AM - 09:00 AM', name: 'Spin Endurance', trainer: 'Emma Stone', room: 'Cardio Deck', intensity: 'High' },
-      { time: '10:00 AM - 11:00 AM', name: 'Pilates Core', trainer: 'Sarah Jenkins', room: 'Studio A', intensity: 'Low' },
-      { time: '04:30 PM - 05:30 PM', name: 'Functional Mobility', trainer: 'David Miller', room: 'Turf Area', intensity: 'Medium' },
-      { time: '06:00 PM - 07:00 PM', name: 'Power Boxing', trainer: 'Marcus Vance', room: 'Studio B', intensity: 'High' }
+    Mardi: [
+      { time: '08:00 - 09:00', name: 'Spinning Endurance', trainer: 'Emma Stone', room: 'Espace Cardio', intensity: 'High' },
+      { time: '10:00 - 11:00', name: 'Pilates Abdos', trainer: 'Sarah Jenkins', room: 'Studio A', intensity: 'Low' },
+      { time: '16:30 - 17:30', name: 'Mobilité Fonctionnelle', trainer: 'David Miller', room: 'Zone Synthétique (Turf)', intensity: 'Medium' },
+      { time: '18:00 - 19:00', name: 'Boxe Power', trainer: 'Marcus Vance', room: 'Studio B', intensity: 'High' }
     ],
-    Wednesday: [
-      { time: '07:00 AM - 08:00 AM', name: 'Strength Conditioning', trainer: 'Marcus Vance', room: 'Main Gym Floor', intensity: 'High' },
-      { time: '09:00 AM - 10:00 AM', name: 'Mobility & Stretch', trainer: 'Sarah Jenkins', room: 'Studio A', intensity: 'Low' },
-      { time: '12:00 PM - 01:00 PM', name: 'HIIT Kettlebell', trainer: 'David Miller', room: 'Turf Area', intensity: 'High' },
-      { time: '05:30 PM - 06:30 PM', name: 'Body Pump', trainer: 'Emma Stone', room: 'Studio B', intensity: 'Medium' }
+    Mercredi: [
+      { time: '07:00 - 08:00', name: 'Conditionnement & Force', trainer: 'Marcus Vance', room: 'Plateau Musculation', intensity: 'High' },
+      { time: '09:00 - 10:00', name: 'Mobilité & Étirements', trainer: 'Sarah Jenkins', room: 'Studio A', intensity: 'Low' },
+      { time: '12:00 - 13:00', name: 'HIIT Kettlebell', trainer: 'David Miller', room: 'Zone Synthétique (Turf)', intensity: 'High' },
+      { time: '17:30 - 18:30', name: 'Body Pump', trainer: 'Emma Stone', room: 'Studio B', intensity: 'Medium' }
     ],
-    Thursday: [
-      { time: '08:00 AM - 09:00 AM', name: 'Spin Endurance', trainer: 'Emma Stone', room: 'Cardio Deck', intensity: 'High' },
-      { time: '10:00 AM - 11:00 AM', name: 'Gentle Hatha Yoga', trainer: 'Sarah Jenkins', room: 'Studio A', intensity: 'Low' },
-      { time: '05:30 PM - 06:30 PM', name: 'Calisthenics Skills', trainer: 'David Miller', room: 'Turf Area', intensity: 'Medium' },
-      { time: '07:00 PM - 08:00 PM', name: 'Revenge Strength Club', trainer: 'Marcus Vance', room: 'Lifting Platform', intensity: 'High' }
+    Jeudi: [
+      { time: '08:00 - 09:00', name: 'Spinning Endurance', trainer: 'Emma Stone', room: 'Espace Cardio', intensity: 'High' },
+      { time: '10:00 - 11:00', name: 'Yoga Hatha Doux', trainer: 'Sarah Jenkins', room: 'Studio A', intensity: 'Low' },
+      { time: '17:30 - 18:30', name: 'Street Workout & Calisthénie', trainer: 'David Miller', room: 'Zone Synthétique (Turf)', intensity: 'Medium' },
+      { time: '19:00 - 20:00', name: 'Club de Force Revenge', trainer: 'Marcus Vance', room: 'Plateau Haltérophilie', intensity: 'High' }
     ],
-    Friday: [
-      { time: '07:00 AM - 08:00 AM', name: 'Strength Conditioning', trainer: 'Marcus Vance', room: 'Main Gym Floor', intensity: 'High' },
-      { time: '09:30 AM - 10:30 AM', name: 'Power Flow Yoga', trainer: 'Sarah Jenkins', room: 'Studio A', intensity: 'Low' },
-      { time: '12:00 PM - 01:00 PM', name: 'HIIT Core Burn', trainer: 'David Miller', room: 'Turf Area', intensity: 'High' },
-      { time: '05:00 PM - 06:00 PM', name: 'Weekend Warmup Run', trainer: 'Emma Stone', room: 'Cardio Deck', intensity: 'Medium' }
+    Vendredi: [
+      { time: '07:00 - 08:00', name: 'Conditionnement & Force', trainer: 'Marcus Vance', room: 'Plateau Musculation', intensity: 'High' },
+      { time: '09:30 - 10:30', name: 'Yoga Power Flow', trainer: 'Sarah Jenkins', room: 'Studio A', intensity: 'Low' },
+      { time: '12:00 - 13:00', name: 'HIIT Brûle-Graisses', trainer: 'David Miller', room: 'Zone Synthétique (Turf)', intensity: 'High' },
+      { time: '17:00 - 18:00', name: 'Course d\'Échauffement', trainer: 'Emma Stone', room: 'Espace Cardio', intensity: 'Medium' }
     ],
-    Saturday: [
-      { time: '09:00 AM - 10:30 AM', name: 'Saturday Boot Camp', trainer: 'David Miller', room: 'Main Floor / Turf', intensity: 'High' },
-      { time: '11:00 AM - 12:00 PM', name: 'Vinyasa Release', trainer: 'Sarah Jenkins', room: 'Studio A', intensity: 'Low' },
-      { time: '02:00 PM - 03:00 PM', name: 'Intro to Olympic Lifts', trainer: 'Marcus Vance', room: 'Lifting Platform', intensity: 'Medium' }
+    Samedi: [
+      { time: '09:00 - 10:30', name: 'Boot Camp du Samedi', trainer: 'David Miller', room: 'Plateau Principal / Turf', intensity: 'High' },
+      { time: '11:00 - 12:00', name: 'Yoga Vinyasa', trainer: 'Sarah Jenkins', room: 'Studio A', intensity: 'Low' },
+      { time: '14:00 - 15:00', name: 'Initiation Haltérophilie', trainer: 'Marcus Vance', room: 'Plateau Haltérophilie', intensity: 'Medium' }
     ],
-    Sunday: [
-      { time: '10:00 AM - 11:00 AM', name: 'Sunday Flow & Recover', trainer: 'Sarah Jenkins', room: 'Studio A', intensity: 'Low' },
-      { time: '11:30 AM - 12:30 PM', name: 'Full Body Mobility', trainer: 'David Miller', room: 'Turf Area', intensity: 'Medium' }
+    Dimanche: [
+      { time: '10:00 - 11:00', name: 'Flow Dominical & Récup', trainer: 'Sarah Jenkins', room: 'Studio A', intensity: 'Low' },
+      { time: '11:30 - 12:30', name: 'Mobilité Corps Complet', trainer: 'David Miller', room: 'Zone Synthétique (Turf)', intensity: 'Medium' }
     ]
   }
 
   const currentClasses = scheduleData[activeDay] || []
 
+  const intensityLabel = (intensity: string) => {
+    switch (intensity) {
+      case 'High': return 'Élevé';
+      case 'Medium': return 'Moyen';
+      case 'Low': return 'Faible';
+      default: return intensity;
+    }
+  }
+
   return (
     <section id="schedule" className="schedule-section">
-      <span className="section-subtitle">TIMETABLE</span>
-      <h2>WEEKLY CLASS SCHEDULE</h2>
+      <span className="section-subtitle">EMPLOI DU TEMPS</span>
+      <h2>PLANNING DES COURS</h2>
 
       {/* Day Select Tabs */}
       <div className="day-tabs-container">
@@ -110,20 +119,20 @@ export default function Schedule() {
               <div className="schedule-cell intensity-cell">
                 <span className={`intensity-badge ${item.intensity.toLowerCase()}`}>
                   <Zap size={12} style={{ marginRight: '4px' }} />
-                  {item.intensity}
+                  {intensityLabel(item.intensity)}
                 </span>
               </div>
 
               {/* CTA */}
               <div className="schedule-cell action-cell">
                 <a href="#contact" className="btn btn-secondary schedule-btn">
-                  Book Slot
+                  Réserver
                 </a>
               </div>
             </div>
           ))
         ) : (
-          <div className="no-classes card-glass">No classes scheduled for today.</div>
+          <div className="no-classes card-glass">Aucun cours prévu pour aujourd'hui.</div>
         )}
       </div>
     </section>

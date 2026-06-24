@@ -8,23 +8,23 @@ export default function Testimonials() {
   const reviews = [
     {
       name: "Alex Rivera",
-      goal: "Body Transformation",
+      goal: "Transformation Physique",
       stars: 5,
-      quote: "REVENGE GYM completely changed my perspective on fitness. The coaches are extremely supportive, and the equipment selection is the best in the city. I've gained 8kg of lean muscle over the last 10 months!",
+      quote: "REVENGE GYM a complètement changé ma vision du fitness. Les coachs soutiennent énormément et la sélection d'équipements est la meilleure de la ville. J'ai pris 8 kg de muscle sec en 10 mois !",
       initials: "AR"
     },
     {
       name: "Jessica Patel",
-      goal: "Athletic Endurance",
+      goal: "Endurance Athlétique",
       stars: 5,
-      quote: "The group classes here are next-level. I specifically love the HIIT and Yoga sessions. The community is incredibly welcoming, and the facility is always clean and sanitized. Highly recommended!",
+      quote: "Les cours collectifs ici sont d'un autre niveau. J'adore particulièrement le HIIT et le Yoga. La communauté est super accueillante et la salle est toujours propre et désinfectée. Recommandé à 100% !",
       initials: "JP"
     },
     {
       name: "Chris Evans",
-      goal: "Strength & Powerlifting",
+      goal: "Force & Force Athlétique",
       stars: 5,
-      quote: "If you want to lift heavy, this is the place. Dedicated platforms, competition-grade plates, and coaches who know their stuff. Marcus helped me fix my deadlift form and hit a new PR within weeks.",
+      quote: "Si vous voulez soulever lourd, c'est l'endroit idéal. Plateaux dédiés, disques de compétition et coachs qui s'y connaissent. Marcus m'a aidé à corriger ma posture au soulevé de terre et à battre mon record en quelques semaines.",
       initials: "CE"
     }
   ]
@@ -41,8 +41,8 @@ export default function Testimonials() {
 
   return (
     <section id="testimonials" className="testimonials-section">
-      <span className="section-subtitle">TESTIMONIALS</span>
-      <h2>MEMBER REVIEWS</h2>
+      <span className="section-subtitle">TÉMOIGNAGES</span>
+      <h2>AVIS DE NOS MEMBRES</h2>
 
       <div className="testimonials-carousel-container card-glass">
         {/* Quote watermark icon */}
@@ -71,7 +71,7 @@ export default function Testimonials() {
 
         {/* Navigation Buttons */}
         <div className="carousel-nav">
-          <button className="carousel-nav-btn" onClick={handlePrev} aria-label="Previous review">
+          <button className="carousel-nav-btn" onClick={handlePrev} aria-label="Avis précédent">
             <ChevronLeft size={20} />
           </button>
           
@@ -85,7 +85,7 @@ export default function Testimonials() {
             ))}
           </div>
 
-          <button className="carousel-nav-btn" onClick={handleNext} aria-label="Next review">
+          <button className="carousel-nav-btn" onClick={handleNext} aria-label="Avis suivant">
             <ChevronRight size={20} />
           </button>
         </div>

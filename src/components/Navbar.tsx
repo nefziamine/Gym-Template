@@ -4,15 +4,15 @@ import logo from '../assets/gymlogo.jpg'
 import './Navbar.css'
 
 const navLinks = [
-  { id: 'home', label: 'Home' },
-  { id: 'about', label: 'About' },
-  { id: 'features', label: 'Features' },
-  { id: 'membership', label: 'Plans' },
+  { id: 'home', label: 'Accueil' },
+  { id: 'about', label: 'À propos' },
+  { id: 'features', label: 'Avantages' },
+  { id: 'membership', label: 'Tarifs' },
   { id: 'services', label: 'Services' },
-  { id: 'schedule', label: 'Schedule' },
-  { id: 'trainers', label: 'Trainers' },
-  { id: 'gallery', label: 'Gallery' },
-  { id: 'testimonials', label: 'Reviews' },
+  { id: 'schedule', label: 'Planning' },
+  { id: 'trainers', label: 'Coachs' },
+  { id: 'gallery', label: 'Galerie' },
+  { id: 'testimonials', label: 'Avis' },
   { id: 'faq', label: 'FAQ' },
   { id: 'contact', label: 'Contact' }
 ]
@@ -92,7 +92,7 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
           </button>
           
           <button className="btn btn-primary nav-cta" onClick={() => handleLinkClick('membership')}>
-            Join Now
+            Nous rejoindre
           </button>
 
           {/* Hamburger Menu Icon */}
@@ -118,7 +118,7 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
           ))}
           <li>
             <button className="btn btn-primary" style={{ width: '100%', marginTop: '1rem' }} onClick={() => handleLinkClick('membership')}>
-              Join Now
+              Nous rejoindre
             </button>
           </li>
         </ul>

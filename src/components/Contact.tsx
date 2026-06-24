@@ -27,13 +27,13 @@ export default function Contact() {
     e.preventDefault()
     const newErrors: Record<string, string> = {}
     
-    if (!formData.name.trim()) newErrors.name = 'Name is required'
+    if (!formData.name.trim()) newErrors.name = 'Le nom est requis'
     if (!formData.email.trim()) {
-      newErrors.email = 'Email is required'
+      newErrors.email = "L'adresse e-mail est requise"
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = 'Email is invalid'
+      newErrors.email = "L'adresse e-mail n'est pas valide"
     }
-    if (!formData.message.trim()) newErrors.message = 'Message is required'
+    if (!formData.message.trim()) newErrors.message = 'Le message est requis'
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors)
@@ -47,77 +47,77 @@ export default function Contact() {
 
   return (
     <section id="contact" className="contact-section">
-      <span className="section-subtitle">GET IN TOUCH</span>
-      <h2>CONTACT US</h2>
+      <span className="section-subtitle">NOUS CONTACTER</span>
+      <h2>CONTACTEZ-NOUS</h2>
 
       <div className="grid-2 contact-grid">
         {/* Left Column: Form */}
         <div className="contact-form-container card-glass">
-          <h3>Send Us a Message</h3>
-          <p className="form-subtitle">Have questions or want to book a free trial? Let us know below.</p>
+          <h3>Envoyez-nous un message</h3>
+          <p className="form-subtitle">Des questions ou envie de réserver un essai gratuit ? Contactez-nous ci-dessous.</p>
           
           {submitted ? (
             <div className="submit-success-banner">
               <MessageSquare className="success-icon" size={24} />
               <div>
-                <h4>Message Sent!</h4>
-                <p>Thank you for reaching out. We will get back to you within 24 hours.</p>
+                <h4>Message envoyé !</h4>
+                <p>Merci de nous avoir contactés. Nous vous répondrons sous 24 heures.</p>
               </div>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="contact-form">
               <div className="form-group">
-                <label htmlFor="name">Your Name</label>
+                <label htmlFor="name">Votre Nom</label>
                 <input
                   type="text"
                   id="name"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="John Doe"
+                  placeholder="Ex: Mohamed Ali"
                   className={errors.name ? 'input-error' : ''}
                 />
                 {errors.name && <span className="error-text">{errors.name}</span>}
               </div>
 
               <div className="form-group">
-                <label htmlFor="email">Your Email</label>
+                <label htmlFor="email">Votre E-mail</label>
                 <input
                   type="email"
                   id="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="johndoe@example.com"
+                  placeholder="Ex: mohamed.ali@email.com"
                   className={errors.email ? 'input-error' : ''}
                 />
                 {errors.email && <span className="error-text">{errors.email}</span>}
               </div>
 
               <div className="form-group">
-                <label htmlFor="plan">Interested Plan</label>
+                <label htmlFor="plan">Formule souhaitée</label>
                 <select
                   id="plan"
                   name="plan"
                   value={formData.plan}
                   onChange={handleChange}
                 >
-                  <option value="trial">Free Trial Pass</option>
-                  <option value="basic">Basic Membership</option>
-                  <option value="standard">Standard Membership</option>
-                  <option value="premium">Premium Membership</option>
-                  <option value="vip">VIP Membership</option>
+                  <option value="trial">Séance d'essai gratuite</option>
+                  <option value="basic">Abonnement Basic</option>
+                  <option value="standard">Abonnement Standard</option>
+                  <option value="premium">Abonnement Premium</option>
+                  <option value="vip">Abonnement VIP</option>
                 </select>
               </div>
 
               <div className="form-group">
-                <label htmlFor="message">Your Message</label>
+                <label htmlFor="message">Votre Message</label>
                 <textarea
                   id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder="How can we help you?"
+                  placeholder="Comment pouvons-nous vous aider ?"
                   rows={4}
                   className={errors.message ? 'input-error' : ''}
                 ></textarea>
@@ -125,7 +125,7 @@ export default function Contact() {
               </div>
 
               <button type="submit" className="btn btn-primary submit-btn">
-                Send Message <Send size={16} />
+                Envoyer le message <Send size={16} />
               </button>
             </form>
           )}
@@ -137,24 +137,24 @@ export default function Contact() {
             <div className="info-item-card card-glass">
               <Phone className="info-icon" size={20} />
               <div>
-                <h4>Call Us</h4>
-                <p>+1 (555) 987-6543</p>
+                <h4>Appelez-nous</h4>
+                <p>+216 51 025 738</p>
               </div>
             </div>
 
             <div className="info-item-card card-glass">
               <Mail className="info-icon" size={20} />
               <div>
-                <h4>Email Us</h4>
-                <p>info@apexgym.com</p>
+                <h4>Écrivez-nous</h4>
+                <p>contact@revengegym.com</p>
               </div>
             </div>
 
             <div className="info-item-card card-glass">
               <MapPin className="info-icon" size={20} />
               <div>
-                <h4>Location</h4>
-                <p>789 Performance Way, Metro City, NY 10018</p>
+                <h4>Adresse</h4>
+                <p>Rue Ibn Kholdoun, Cité Ettadhamen, 2041</p>
               </div>
             </div>
           </div>
@@ -163,12 +163,12 @@ export default function Contact() {
           <div className="map-container card-glass">
             <div className="map-header">
               <MapPin size={16} className="map-pin-accent" />
-              <span>REVENGE GYM LOCATION</span>
+              <span>LOCALISATION REVENGE GYM</span>
             </div>
             <div className="map-iframe-wrapper">
               <iframe
                 title="REVENGE GYM Location"
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDPNvdTmK-DHdwwLszjAk7bsHbJMWfEdy8&q=789+Performance+Way,+New+York,+NY+10018&zoom=15&maptype=roadmap"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDPNvdTmK-DHdwwLszjAk7bsHbJMWfEdy8&q=Rue+Ibn+Kholdoun,+Cite+Ettadhamen,+Tunis&zoom=15&maptype=roadmap"
                 width="100%"
                 height="280"
                 style={{ border: 0, borderRadius: '4px' }}
@@ -178,16 +178,16 @@ export default function Contact() {
               ></iframe>
             </div>
             <div className="map-footer">
-              <p>Valet &amp; free parking deck accessible via Rear Entrance A.</p>
+              <p>Parking gratuit sécurisé disponible pour tous nos membres.</p>
             </div>
           </div>
 
           {/* Social Links */}
           <div className="contact-socials-box">
-            <h4>Follow Our Channels</h4>
+            <h4>Suivez-nous sur les réseaux</h4>
             <div className="socials-row">
               <a href="https://instagram.com" target="_blank" rel="noreferrer" className="social-circle" aria-label="Instagram"><Share2 size={20} /></a>
-              <a href="https://facebook.com" target="_blank" rel="noreferrer" className="social-circle" aria-label="Facebook"><Users size={20} /></a>
+              <a href="https://www.facebook.com/people/Revenge-Gym/61581708511527/" target="_blank" rel="noreferrer" className="social-circle" aria-label="Facebook"><Users size={20} /></a>
               <a href="https://youtube.com" target="_blank" rel="noreferrer" className="social-circle" aria-label="Youtube"><Video size={20} /></a>
             </div>
           </div>
