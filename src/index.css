@@ -5,14 +5,14 @@
   --bg-primary: #0a0b0d;
   --bg-secondary: #12141c;
   --bg-tertiary: #191b26;
-  --accent-color: #ccff00; /* Volt Green */
-  --accent-color-hover: #b3df00;
-  --accent-glow: rgba(204, 255, 0, 0.2);
+  --accent-color: #ffeb00; /* Logo Yellow */
+  --accent-color-hover: #e6d400;
+  --accent-glow: rgba(255, 235, 0, 0.2);
   --text-primary: #ffffff;
   --text-secondary: #8a8f98;
   --text-muted: #4e525a;
   --border-color: #1e2230;
-  --border-glow: rgba(204, 255, 0, 0.4);
+  --border-glow: rgba(255, 235, 0, 0.4);
 
   /* Typography */
   --font-sans: 'Outfit', system-ui, -apple-system, sans-serif;

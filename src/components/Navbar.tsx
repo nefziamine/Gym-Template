@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Menu, X, Sun, Moon } from 'lucide-react'
+import logo from '../assets/gymlogo.jpg'
 import './Navbar.css'
 
 const navLinks = [
@@ -66,7 +67,7 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <a href="#home" className="logo" onClick={(e) => { e.preventDefault(); handleLinkClick('home') }}>
-          APEX<span>GYM</span>
+          <img src={logo} alt="RevengeGym Logo" style={{ height: '40px', width: 'auto' }} />
         </a>
 
         {/* Desktop Links */}

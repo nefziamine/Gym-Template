@@ -10,7 +10,7 @@ export default function Testimonials() {
       name: "Alex Rivera",
       goal: "Body Transformation",
       stars: 5,
-      quote: "APEX GYM completely changed my perspective on fitness. The coaches are extremely supportive, and the equipment selection is the best in the city. I've gained 8kg of lean muscle over the last 10 months!",
+      quote: "REVENGE GYM completely changed my perspective on fitness. The coaches are extremely supportive, and the equipment selection is the best in the city. I've gained 8kg of lean muscle over the last 10 months!",
       initials: "AR"
     },
     {

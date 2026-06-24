@@ -19,7 +19,7 @@ export default function Hero() {
           <span>LIMITS</span>
         </h1>
         <p className="hero-description">
-          Welcome to APEX GYM, the ultimate training facility designed to push your boundaries. Experience world-class coaches, cutting-edge equipment, and an elite fitness community.
+          Welcome to REVENGE GYM, the ultimate training facility designed to push your boundaries. Experience world-class coaches, cutting-edge equipment, and an elite fitness community.
         </p>
 
         <div className="hero-buttons">

@@ -163,11 +163,11 @@ export default function Contact() {
           <div className="map-container card-glass">
             <div className="map-header">
               <MapPin size={16} className="map-pin-accent" />
-              <span>APEX LOCATION</span>
+              <span>REVENGE GYM LOCATION</span>
             </div>
             <div className="map-iframe-wrapper">
               <iframe
-                title="APEX GYM Location"
+                title="REVENGE GYM Location"
                 src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDPNvdTmK-DHdwwLszjAk7bsHbJMWfEdy8&q=789+Performance+Way,+New+York,+NY+10018&zoom=15&maptype=roadmap"
                 width="100%"
                 height="280"

@@ -15,12 +15,12 @@ import Footer from './components/Footer'
 
 export default function App() {
   const [theme, setTheme] = useState(() => {
-    return localStorage.getItem('apex-theme') || 'dark'
+    return localStorage.getItem('revenge-theme') || 'dark'
   })
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
-    localStorage.setItem('apex-theme', theme)
+    localStorage.setItem('revenge-theme', theme)
   }, [theme])
 
   const toggleTheme = () => {

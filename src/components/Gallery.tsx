@@ -52,7 +52,7 @@ export default function Gallery() {
       id: 5,
       title: "Annual Powerlift Showdown",
       category: "events",
-      description: "Apex's community bench, squat, and deadlift competition.",
+      description: "RevengeGym's community bench, squat, and deadlift competition.",
       details: "Every December we host our member strength face-off, complete with judges, scoring sheets, food stalls, and active prizes.",
       gradient: "linear-gradient(135deg, #12141c 0%, #7b2cbf 100%)"
     },

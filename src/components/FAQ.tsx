@@ -29,7 +29,7 @@ export default function FAQ() {
     },
     {
       question: "How do I book a session with a Personal Trainer?",
-      answer: "Sessions can be booked directly through our APEX Mobile App, by emailing your coach, or by speaking with our front desk team during staffed hours."
+      answer: "Sessions can be booked directly through our RevengeGym Mobile App, by emailing your coach, or by speaking with our front desk team during staffed hours."
     },
     {
       question: "Is parking available at the facility?",

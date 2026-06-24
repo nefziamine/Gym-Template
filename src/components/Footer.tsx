@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Dumbbell, Send, Check } from 'lucide-react'
+import logo from '../assets/gymlogo.jpg'
 import './Footer.css'
 
 export default function Footer() {
@@ -29,13 +30,13 @@ export default function Footer() {
         {/* Col 1: Brand Info */}
         <div className="footer-col brand-col">
           <a href="#home" className="footer-logo" onClick={(e) => { e.preventDefault(); handleLinkClick('home') }}>
-            APEX<span>GYM</span>
+            <img src={logo} alt="RevengeGym Logo" style={{ height: '40px', width: 'auto' }} />
           </a>
           <p className="brand-pitch">
             Premium physical performance training center designed to elevate human strength, mobility, and endurance. Build your elite physique with us.
           </p>
           <p className="copyright-text">
-            &copy; {new Date().getFullYear()} APEX GYM. All rights reserved.
+            &copy; {new Date().getFullYear()} REVENGE GYM. All rights reserved.
           </p>
         </div>
 

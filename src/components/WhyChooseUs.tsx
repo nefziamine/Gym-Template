@@ -17,7 +17,7 @@ export default function WhyChooseUs() {
     <section id="features" className="why-section">
       <div className="why-header">
         <span className="section-subtitle">OUR ADVANTAGES</span>
-        <h2>WHY CHOOSE APEX</h2>
+        <h2>WHY CHOOSE REVENGEGYM</h2>
       </div>
 
       <div className="why-list">

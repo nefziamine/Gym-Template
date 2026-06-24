@@ -39,7 +39,7 @@ export default function Schedule() {
       { time: '08:00 AM - 09:00 AM', name: 'Spin Endurance', trainer: 'Emma Stone', room: 'Cardio Deck', intensity: 'High' },
       { time: '10:00 AM - 11:00 AM', name: 'Gentle Hatha Yoga', trainer: 'Sarah Jenkins', room: 'Studio A', intensity: 'Low' },
       { time: '05:30 PM - 06:30 PM', name: 'Calisthenics Skills', trainer: 'David Miller', room: 'Turf Area', intensity: 'Medium' },
-      { time: '07:00 PM - 08:00 PM', name: 'Apex Strength Club', trainer: 'Marcus Vance', room: 'Lifting Platform', intensity: 'High' }
+      { time: '07:00 PM - 08:00 PM', name: 'Revenge Strength Club', trainer: 'Marcus Vance', room: 'Lifting Platform', intensity: 'High' }
     ],
     Friday: [
       { time: '07:00 AM - 08:00 AM', name: 'Strength Conditioning', trainer: 'Marcus Vance', room: 'Main Gym Floor', intensity: 'High' },

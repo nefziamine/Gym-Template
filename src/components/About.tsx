@@ -42,13 +42,13 @@ export default function About() {
         {/* Left: Narrative */}
         <div className="about-narrative">
           <span className="section-subtitle">WHO WE ARE</span>
-          <h2 className="about-heading">ABOUT APEX GYM</h2>
+          <h2 className="about-heading">ABOUT REVENGE GYM</h2>
           <h3 className="about-highlight">
             NOT JUST A GYM —<br />
             <span>A BREEDING GROUND FOR GREATNESS.</span>
           </h3>
           <p className="about-text">
-            APEX GYM is built for those who seek to optimize their physical potential and mental strength. Whether you're a seasoned competitor or just starting out, we provide the environment, gear, and expertise to help you succeed.
+            REVENGE GYM is built for those who seek to optimize their physical potential and mental strength. Whether you're a seasoned competitor or just starting out, we provide the environment, gear, and expertise to help you succeed.
           </p>
 
           {/* Stats Row */}

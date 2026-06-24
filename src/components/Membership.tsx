@@ -15,7 +15,7 @@ export default function Membership() {
         "Gym floor access",
         "Standard locker room access",
         "Free on-site parking",
-        "Apex mobile app access"
+        "RevengeGym mobile app access"
       ],
       cta: "Get Basic",
       popular: false
