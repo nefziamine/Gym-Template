@@ -1,0 +1,142 @@
+.trainers-section {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.trainers-grid {
+  margin-top: 3rem;
+}
+
+.trainer-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem;
+  align-items: stretch;
+  gap: 1.5rem;
+}
+
+.trainer-avatar-frame {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.trainer-avatar-text {
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  opacity: 0.15;
+  letter-spacing: 2px;
+}
+
+.trainer-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 11, 13, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.trainer-avatar-frame:hover .trainer-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.trainer-overlay-content {
+  text-align: left;
+}
+
+.trainer-bio {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.trainer-certs-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.certs-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  text-transform: uppercase;
+}
+
+.trainer-certs-list {
+  list-style: none;
+  font-size: 0.8rem;
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.trainer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.trainer-name {
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.trainer-role {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.trainer-specialty {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+.trainer-socials {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 0.8rem;
+}
+
+.trainer-socials a {
+  color: var(--text-secondary);
+  transition: var(--transition-smooth);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.trainer-socials a:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+}

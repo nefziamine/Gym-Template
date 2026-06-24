@@ -1,0 +1,127 @@
+.why-section {
+  border-bottom: 1px solid var(--border-color);
+  padding: 6.5rem 2rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.why-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.why-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+.why-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 2rem 2.5rem;
+  position: relative;
+  border: 1px solid var(--border-color);
+  margin: -1px 0 0 -1px; /* collapse borders */
+  transition: var(--transition-smooth);
+  background: var(--bg-primary);
+  overflow: hidden;
+}
+
+.why-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--accent-glow);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.why-item:hover {
+  z-index: 2;
+  border-color: var(--accent-color);
+}
+
+.why-item:hover::after {
+  opacity: 1;
+}
+
+.why-number {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--border-color);
+  line-height: 1;
+  transition: var(--transition-smooth);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.why-item:hover .why-number {
+  color: var(--accent-color);
+}
+
+.why-icon-box {
+  color: var(--accent-color);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  width: 44px;
+  height: 44px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 0.4rem;
+  position: relative;
+  z-index: 1;
+  transition: var(--transition-smooth);
+}
+
+.why-item:hover .why-icon-box {
+  background: var(--accent-color);
+  color: #0a0b0d;
+}
+
+.why-text {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.why-title {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0;
+}
+
+.why-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.why-line {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .why-list {
+    grid-template-columns: 1fr;
+  }
+
+  .why-item {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .why-number {
+    font-size: 2.5rem;
+  }
+}

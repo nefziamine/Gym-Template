@@ -1,0 +1,117 @@
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: var(--navbar-height) 2rem 4rem;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+}
+
+.hero-badge {
+  background: var(--accent-glow);
+  color: var(--accent-color);
+  border: 1px solid var(--border-glow);
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  color: var(--text-primary);
+  font-size: clamp(3.5rem, 8vw, 6.5rem);
+  line-height: 0.95;
+  margin-bottom: 1.5rem;
+}
+
+.hero-title span {
+  color: var(--accent-color);
+  text-shadow: 0 0 30px var(--accent-glow);
+}
+
+.hero-description {
+  color: var(--text-secondary);
+  font-size: 1.15rem;
+  max-width: 600px;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.hero-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  background: rgba(18, 20, 28, 0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-color);
+  padding: 1.5rem 4rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.stat-item h3 {
+  font-size: 2.2rem;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.stat-item p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--border-color);
+}
+
+@media (max-width: 768px) {
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+  
+  .hero-buttons .btn {
+    width: 100%;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem 2rem;
+  }
+
+  .stat-divider {
+    width: 80%;
+    height: 1px;
+  }
+}

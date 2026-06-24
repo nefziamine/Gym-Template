@@ -1,0 +1,181 @@
+.membership-section {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.billing-toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 4rem;
+}
+
+.billing-label {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: var(--transition-smooth);
+}
+
+.billing-label.active {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.discount-tag {
+  background: var(--accent-glow);
+  color: var(--accent-color);
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  margin-left: 0.3rem;
+  font-weight: 700;
+}
+
+.billing-switch {
+  width: 55px;
+  height: 28px;
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 100px;
+  cursor: pointer;
+  position: relative;
+  transition: var(--transition-smooth);
+}
+
+.billing-switch-handle {
+  width: 20px;
+  height: 20px;
+  background-color: var(--text-secondary);
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  transition: var(--transition-smooth);
+}
+
+.billing-switch.yearly {
+  background-color: var(--accent-glow);
+  border-color: var(--accent-color);
+}
+
+.billing-switch.yearly .billing-switch-handle {
+  transform: translateX(25px);
+  background-color: var(--accent-color);
+}
+
+.pricing-grid {
+  align-items: stretch;
+}
+
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 3rem 2rem 2rem;
+}
+
+.pricing-card.popular {
+  border-color: var(--accent-color);
+  box-shadow: 0 10px 30px -10px var(--accent-glow);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--accent-color);
+  color: #0a0b0d;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.3rem 1.2rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pricing-header {
+  margin-bottom: 2rem;
+}
+
+.plan-name {
+  font-size: 1.8rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.plan-description {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+.plan-price-box {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin-bottom: 0.2rem;
+}
+
+.currency {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.price-amount {
+  font-size: 3.8rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.price-period {
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.billing-type {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.plan-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  text-align: left;
+  flex-grow: 1;
+}
+
+.plan-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.check-icon {
+  color: var(--accent-color);
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.cta-btn {
+  width: 100%;
+}
+
+.pricing-disclaimer {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
